@@ -12,14 +12,13 @@ Your app should provide 2 data endpoints:
   Return a results object that contains all of the partial_postcodes found and how many of them where found
 
 ## Dependencies
-"devDependencies": {
-    "expect": "^1.20.2",
-    "mocha": "^4.0.1",
-    "supertest": "^3.0.0"
-  },
- "dependencies": {
-    "express": "^4.16.1"
- }
+* dependencies
+express
+
+* dev dependencies
+expect,
+mocha,
+supertest0.0"
  
 ## Setup
 * clone the repo
