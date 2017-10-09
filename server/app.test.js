@@ -4,10 +4,10 @@ const expect = require('expect');
 var app = require('./app.js').app
 
 describe('app', () => {
-  describe('GET /clinics/partial_postcode', () => {
+  describe('GET /clinics/postcode', () => {
     it('returns formatted data if located for supplied param', (done) => {
       request(app)
-      .get('/clinics/partial_postcode/?partial_postcode=cr9')
+      .get('/clinics/postcode/?partial_postcode=cr9')
       .expect(200)
       .expect((res) => {
         expect(res.text).toInclude('"organisation_id": "58961"')
@@ -16,7 +16,7 @@ describe('app', () => {
 
     it('returns an error if no data located for supplied param', (done) => {
       request(app)
-      .get('/clinics/partial_postcode/?partial_postcode=e1')
+      .get('/clinics/postcode/?partial_postcode=e1')
       .expect(200)
       .expect((res) => {
         expect(res.text).toBe('Unable to locate postcode data for e1')

@@ -5,7 +5,7 @@ const buildResponse = require('../build-response/build-response');
 
 var app = express()
 
-app.get('/clinics/partial_postcode', (req, res) => {
+app.get('/clinics/postcode', (req, res) => {
   var postcode = req.query.partial_postcode;
   api.requestData(postcode, "partial_postcode").then((result, error) => {
     res.send(JSON.stringify(buildResponse.getPostcode(result), undefined, 2));
