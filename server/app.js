@@ -1,7 +1,7 @@
 const express = require('express');
 
-const api = require('./api');
-const buildResponse = require('./build-response');
+const api = require('../api/api');
+const buildResponse = require('../build-response/build-response');
 
 var app = express()
 
@@ -24,4 +24,6 @@ app.get('/clinics/city', (req, res) => {
 })
 
 module.exports.app = app;
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("app running pont port 3000")
+});
