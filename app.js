@@ -19,7 +19,7 @@ app.get('/clinics/city', (req, res) => {
   api.requestData(city, "city").then((result, error) => {
     res.send(buildResponse.getCity(result));
   }).catch((error) => {
-    res.send(error);
+    res.send(`Unable to locate city data for ${city}`);
   });
 })
 
